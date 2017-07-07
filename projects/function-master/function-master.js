@@ -72,7 +72,8 @@ function nonFriends(name, list) {
         if(list[i]['name'] !== name && list[i]['friends'] && (!(list[i]['friends'].includes(name)))) {
         newList.push(list[i]['name']);
     } 
-   } return newList;    
+   } 
+   return newList;    
 };
 
 function updateObject(obj, prop, val) {
