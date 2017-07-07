@@ -2,9 +2,10 @@ $(function () {
   // ALL YOUR CODE GOES BELOW HERE //
   $.getJSON('data/product.json', function(data) {
     
-    $('<section>').attr('id', 'product-section').append($('<h3>').text('Products')).appendTo($('#container'));
+    $('<section>').attr('id', 'product-section').appendTo($('#container'));
+    $('<h3>').attr('id', 'header').text('Products').appendTo($('#product-section'));
         
-    $('#product-section').append($('<ul>').attr('id', 'list-products'));
+    $('#product-section').append($('<ul>').attr('id', 'products'));
     
     _.map(data, function(item) {
             var $listItem = $('<li>').addClass('item');
@@ -15,14 +16,9 @@ $(function () {
             var $availColors = $('<div>').text(item.availableColors).addClass('availColors');
             var $stock = $('<div>').text(item.stock).addClass('stock');
             $listItem.append($type, $desc, $price, $color, $availColors, $stock).prepend($('<img>').attr('id', 'product-image').attr('src', '/projects/product-project/img/product/thumbs/' + item.image));
-            $('#list-products').append($listItem);
+            $('#products').append($listItem);
         });
         
-        $('img').css(height, '100').css(width, '100');
-    
-        
-  
-  
-});
+  });
   // ALL YOUR CODE GOES ABOVE HERE //
 });
