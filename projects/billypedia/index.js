@@ -57,7 +57,7 @@ $(document).ready(function() {
             var billyPic = $('#image-billy').attr('src');
             var billyIndex = _.indexOf(data.images.billy, billyPic);
             console.log(billyIndex);
-            if(billyIndex < data.images.billy.length) {
+            if(billyIndex < 3) {
                 billyPic = data.images.billy[billyIndex + 1];
                 return $('#image-billy').attr('src', billyPic);
             } else {

@@ -20,6 +20,7 @@ $(function () {
         
         $('img').css(height, '100').css(width, '100');
     
+        
   
   
 });
